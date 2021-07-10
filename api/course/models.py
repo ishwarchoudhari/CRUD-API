@@ -1,6 +1,6 @@
 from django.db import models
 from api.category.models import Category
-from api.user.models import User
+from api.user.models import CustomUser
 # Create your models here.
 
 class Course(models.Model):
@@ -11,7 +11,7 @@ class Course(models.Model):
     date = models.DateField()
     is_active = models.BooleanField(default=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
-    users = models.ManyToManyField(User)
+    users = models.ManyToManyField(CustomUser)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

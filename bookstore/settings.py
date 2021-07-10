@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'api',
     'api.category',
-    'api.course'
+    'api.course',
+    'api.user',
+
 ]
 
 MIDDLEWARE = [
@@ -131,6 +133,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+AUTH_USER_MODEL = "user.CustomUser"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
