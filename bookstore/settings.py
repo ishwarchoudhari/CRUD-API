@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'api.category',
     'api.course',
     'api.user',
+    'api.wishlist',
 
 ]
 
